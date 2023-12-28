@@ -1,0 +1,181 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Times New Roman", Times, serif;
+  scroll-padding: 10px;
+}
+:root {
+  /* Main Colours for the Project */
+  /* link: https://colorhunt.co/palette/0f0f0f232d3f005b41008170  */
+
+  --black-color: #0f0f0f;
+  --dark-color: #232d3f;
+  --dark-teal-color: #005b41;
+  --light-teal-color: #008170;
+  --red-york-color: #ea415b;
+}
+header {
+  background: linear-gradient(
+    to top,
+    var(--black-color),
+    var(--dark-color),
+    gray
+  );
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+
+li {
+  font-family: "Times New Roman", Times, serif;
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+ul li a {
+  display: inline-block;
+  color: var(--dark-color);
+  font-weight: bold;
+}
+.logo {
+  padding-right: 50%;
+}
+
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 0.75rem;
+}
+
+.img {
+  border-radius: 50%; /* Makes the image circular */
+  box-shadow: 0 4px 8px var(--dark-color); /* Adds a shadow for depth */
+  border: 3px solid #e51535; /* Adds a solid border */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for interactions */
+}
+
+.img:hover {
+  transform: scale(1.05); /* Slightly enlarges the image on hover */
+  box-shadow: 0 16px 16px white; /* Increases the shadow on hover */
+}
+
+@media (min-width: 990px) {
+  .push-start {
+    height: 300;
+  }
+}
+@media (max-width: 990px) {
+  .push-start {
+    height: 150px;
+    margin: 0;
+    padding: 0;
+  }
+  ul li a {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding: 0;
+  }
+  .fs-2 {
+    font-size: larger;
+    font-weight: bold;
+  }
+}
+
+/* General Anchor Tag Styling */
+a {
+  transition: color 0.3s ease, text-decoration-color 0.3s ease;
+}
+
+a:hover,
+a:focus {
+  color: #ea415b; /* Change color on hover */
+  text-decoration: underline;
+  text-decoration-color: white; /* Underline color */
+}
+
+/* Navigation Tab Styling */
+.nav-link {
+  transition: background-color 0.3s ease, border-bottom-color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  border-bottom: 3px solid var(--red-york-color); /* Underline effect */
+}
+
+/* SVG icons color change */
+.nav-link svg {
+  fill: currentColor; /* Ensures SVG icons inherit the text color */
+  transition: fill 0.3s ease;
+}
+
+.nav-link:hover svg,
+.nav-link:focus svg {
+  fill: var(--black-color); /* Change SVG icon color on hover */
+}
+
+#linkedin {
+  height: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+footer {
+  background: linear-gradient(to left, var(--red-york-color), white);
+}
+
+.test {
+  display: flex;
+  justify-content: space-around;
+  /* flex-direction: column; */
+}
+
+.contact .container h2 {
+  background: #ea415b;
+}
+
+.email-h3 {
+  font-size: 1.3rem;
+  font-style: italic;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.my-own-btn {
+  background-color: var(--red-york-color); /* Bootstrap primary color */
+  color: white;
+  padding: 0.375rem 0.75rem; /* Padding similar to Bootstrap */
+  font-size: 1rem; /* Default font size */
+  border-radius: 0.25rem; /* Rounded corners like Bootstrap */
+  border: 1px solid transparent; /* Border style */
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; /* Smooth transition for hover effects */
+  cursor: pointer; /* Pointer cursor on hover */
+  text-align: center; /* Center the text */
+  vertical-align: middle; /* Align text vertically */
+  user-select: none; /* Prevent text selection */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.my-own-btn:hover {
+  background-color: white; /* Slightly darker shade on hover, similar to Bootstrap */
+  color: black;
+}
+
+.my-own-btn:focus {
+  outline: none; /* Remove the focus outline */
+  box-shadow: 0 0 0 0.2rem var(--red-york-color); /* Bootstrap like focus shadow */
+}
